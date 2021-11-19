@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-11-19T21:06:55 IST" name="Suite" finished-at="2021-11-19T21:11:23 IST" duration-ms="267529">
+    <groups>
+    </groups>
+    <test started-at="2021-11-19T21:06:55 IST" name="Test" finished-at="2021-11-19T21:11:23 IST" duration-ms="267529">
+      <class name="eazydiner.HelpTc">
+        <test-method signature="testHelpTC()[pri:0, instance:eazydiner.HelpTc@39276c7a]" started-at="2021-11-19T21:06:55 IST" name="testHelpTC" finished-at="2021-11-19T21:07:49 IST" duration-ms="54463" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testHelpTC -->
+      </class> <!-- eazydiner.HelpTc -->
+      <class name="eazydiner.Delivery">
+        <test-method signature="testDeliveryFunctionality()[pri:0, instance:eazydiner.Delivery@1c98e98b]" started-at="2021-11-19T21:09:03 IST" name="testDeliveryFunctionality" finished-at="2021-11-19T21:11:23 IST" duration-ms="139805" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeliveryFunctionality -->
+      </class> <!-- eazydiner.Delivery -->
+      <class name="eazydiner.LocationFilter">
+        <test-method signature="testLocationFilter()[pri:0, instance:eazydiner.LocationFilter@26555be1]" started-at="2021-11-19T21:07:49 IST" name="testLocationFilter" finished-at="2021-11-19T21:09:03 IST" duration-ms="73212" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLocationFilter -->
+      </class> <!-- eazydiner.LocationFilter -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
