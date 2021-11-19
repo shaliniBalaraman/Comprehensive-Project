@@ -1,6 +1,6 @@
 package eazydiner;
 
-import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -26,7 +26,7 @@ public class LocationFilter {
 
 		// Maximise window
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		// load URL
 		driver.get("https://www.eazydiner.com/");
