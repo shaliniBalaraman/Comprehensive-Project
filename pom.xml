@@ -17,7 +17,6 @@
 						<suiteXmlFile>
 							testng.xml
 						</suiteXmlFile>
-						
 					</suiteXmlFiles>
 					<testFailureIgnore>true</testFailureIgnore>
 				</configuration>

@@ -41,20 +41,36 @@ public class Delivery {
 		WebElement order = driver.findElement(By.xpath("//a[@class='btn btn-primary height-40 block bold padding-10 font-14 apxor_click']"));
 		executor.executeScript("arguments[0].click();", order);
 		
-		//select 10PM
-		driver.findElement(By.xpath("//span[text()='10:00 PM']")).click();
+		//Click on delivery option
+		WebElement clickDelivery = driver.findElement(By.xpath("//div[text()='Delivery']"));
+		executor.executeScript("arguments[0].click();", clickDelivery);
 		
-		//click on continue button
-		driver.findElement(By.xpath("//button[contains(text(),'Continue to book a table')]")).click();
+		//Check the veg manu
+		driver.findElement(By.xpath("(//div[@class='slider'])[3]")).click();
 		
-		//Get the Booking summary details
-		String bookingSummary = driver.findElement(By.xpath("//div[@class='bg-white bottom_content']")).getText();
-		System.out.println(bookingSummary);
+		//click on salads
+		driver.findElement(By.xpath("//div[text()='Salads']")).click();
 		
-		//WebElement verifySelected = driver.findElement(By.xpath("//div[@class='flex flex-between font-15 grey-dark semi-bold']"));
-		//Assert.assertEquals("Deal Selected", verifySelected);
+		//click to add the item to order
+		WebElement addItem = driver.findElement(By.xpath("(//div[@class='flex allProd']/following::span[@class='addText'])[6]"));
+		addItem.click();
 		
-		//To close the window
+		//Conform before add to order
+		WebElement add = driver.findElement(By.xpath("//button[@class='addons-btn pointer']"));
+		executor.executeScript("arguments[0].click();", add);
+		
+		//Print selected Item from order summary
+		String selectedItem = driver.findElement(By.xpath("//h6[@class='grey-darker bold font-14']")).getText();
+		System.out.println(selectedItem);
+		String summary = driver.findElement(By.xpath("//div[@class='orderSum w-6-12 w-lg-4-12 bg-white margin-l-20 padding-15']")).getText();
+		
+		//Check whether the item is added in the order summary or not
+		if(summary.contains("Snow Peas & Green Bean Salad")) {
+			System.out.println("Item added successfully in the order summary");
+		}else {
+			System.out.println("Item not added in the order summary");
+		}
+		
 		driver.close();
 	}
 

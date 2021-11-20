@@ -3,9 +3,9 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="eazydiner.HelpTc"/>
       <class name="eazydiner.LocationFilter"/>
       <class name="eazydiner.Delivery"/>
+      <class name="eazydiner.BookTable"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
